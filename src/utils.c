@@ -3,7 +3,7 @@
 void interruptHandler(int sig_num)
 {
   (void)sig_num; // Unused
-  const char *msg = "\n## 3230yash >> ";
+  const char *msg = "\n" SHELL_PROMPT;
   if (write(STDOUT_FILENO, msg, strlen(msg)) == -1)
   {
   }

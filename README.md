@@ -1,4 +1,4 @@
-# 3230yash - Yet Another Shell
+# mosh - My Own Shell
 
 A lightweight, custom Unix shell implementation in C. This project demonstrates core Operating Systems concepts including process creation, execution, signal handling, and inter-process communication.
 
@@ -53,15 +53,15 @@ Start the shell:
 ./shell
 ```
 
-You will see the prompt `## 3230yash >>`. You can now type commands.
+You will see the prompt `## mosh >>`. You can now type commands.
 
 ### Examples
 
 ```bash
-## 3230yash >> ls -l
-## 3230yash >> cd ..
-## 3230yash >> history
-## 3230yash >> ls | grep .c
+## mosh >> ls -l
+## mosh >> cd ..
+## mosh >> history
+## mosh >> ls | grep .c
 ```
 
 ## Development

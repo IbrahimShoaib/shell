@@ -10,7 +10,7 @@ int parseCommand(char *command_str, char **arguments)
   {
     if (count >= MAX_ARGS - 1)
     {
-      printf("3230yash: Too many arguments\n");
+      printf(SHELL_PREFIX "Too many arguments\n");
       return -1;
     }
 

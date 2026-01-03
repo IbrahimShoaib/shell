@@ -18,7 +18,7 @@ void execute_single_command(char **arguments)
     signal(SIGINT, SIG_DFL);
     if (execvp(arguments[0], arguments) == -1)
     {
-      fprintf(stderr, "3230yash: '%s': %s\n", arguments[0], strerror(errno));
+      fprintf(stderr, "%s '%s': %s\n", SHELL_PREFIX, arguments[0], strerror(errno));
       exit(1);
     }
   }
@@ -95,7 +95,7 @@ void execute_pipeline(char **command_list, int command_count)
       if (parseCommand(command_list[i], arguments) > 0)
       {
         execvp(arguments[0], arguments);
-        fprintf(stderr, "3230yash: '%s': %s\n", arguments[0], strerror(errno));
+        fprintf(stderr, "%s '%s': %s\n", SHELL_PREFIX, arguments[0], strerror(errno));
       }
       exit(1);
     }

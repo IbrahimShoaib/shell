@@ -17,6 +17,9 @@
 #define MAX_ARGS 64
 #define PATH_MAX_LEN 256
 #define MAX_SNAPSHOTS 1024
+#define SHELL_NAME "mosh"
+#define SHELL_PROMPT "## " SHELL_NAME " >> "
+#define SHELL_PREFIX SHELL_NAME ": "
 
 typedef struct
 {

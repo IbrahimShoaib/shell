@@ -14,8 +14,7 @@ int main(int argc, char *argv[])
   while (1)
   {
 
-    const char *prompt = "## 3230yash >> ";
-    write(STDOUT_FILENO, prompt, strlen(prompt));
+    write(STDOUT_FILENO, SHELL_PROMPT, strlen(SHELL_PROMPT));
 
     if (fgets(input, sizeof(input), stdin) == NULL)
     {
@@ -40,13 +39,13 @@ int main(int argc, char *argv[])
 
     if (input[0] == '|' || input[strlen(input) - 1] == '|')
     {
-      printf("3230yash: Incorrect pipe sequence\n");
+      printf(SHELL_PREFIX "Incorrect pipe sequence\n");
       continue;
     }
 
     if (strstr(input, "||") != NULL)
     {
-      printf("3230yash: should not have two consecutive | without in-between command\n");
+      printf(SHELL_PREFIX "should not have two consecutive | without in-between command\n");
       continue;
     }
 
@@ -84,7 +83,7 @@ int main(int argc, char *argv[])
 
     if (pipe_error)
     {
-      printf("3230yash: should not have two consecutive | without in-between command\n");
+      printf(SHELL_PREFIX "Incorrect pipe sequence\n");
       free(input_copy);
       continue;
     }
