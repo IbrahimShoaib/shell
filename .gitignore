@@ -1,0 +1,12 @@
+# Build artifacts
+obj/
+shell
+*.o
+*.dSYM/
+
+# Editor files
+.vscode/
+.DS_Store
+*.swp
+
+Dockerfile
